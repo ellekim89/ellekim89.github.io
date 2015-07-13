@@ -119,17 +119,17 @@ $(function(){
 	 		twoScore = score
 	 		running = false;
 	 			if (oneScore < twoScore){
-	 				alert('Player 1 wins!');
+	 				$('#WinnerOne').modal('show');
 	 				$('h3').text('');
 	 				$('h3').append("Player 1 Wins!")
 	 			} 
 	 			else if(twoScore < oneScore){
-	 				alert('Player 2 wins!');
+	 				$('#WinnerTwo').modal('show');
 	 				$('h3').text('');
 	 				$('h3').append("Player 2 Wins!")
 	 			}
 	 			else{
-	 				alert('It was a tie!');
+	 				$('#WinnerTie').modal('show');
 	 				$('h3').text('');
 	 				$('h3').append("It's a tie!")
 	 			}
