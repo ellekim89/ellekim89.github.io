@@ -1,0 +1,48 @@
+body{
+	background-image: url("http://hdwallpapersfit.com/wp-content/uploads/2015/01/channing-tatum-latest-wallpapers-fit.jpg");
+	width: 550px;
+	margin: auto;
+	text-align: center;
+}
+
+h1{
+	margin-left: -20px;
+	text-align: center;
+}
+h3{
+	margin-left: -20px;
+}
+.square{
+	background-color: white;
+	border-radius: 100%;
+	border: 2px solid black;
+	height: 125px;
+	width: 125px;
+	margin: 5px;
+	float: left;
+}
+.visibility {
+	visibility: hidden;
+}
+img{ 
+	border-radius: 100%;
+	max-height:100%;
+
+}
+
+button{
+	margin-left: -20px;
+	margin-top: 15px;
+	margin-right: 25px;
+}
+
+.modal-content {
+	height: 500px;
+}
+
+.yes{
+	margin-left: 10px;
+}
+
+
+
