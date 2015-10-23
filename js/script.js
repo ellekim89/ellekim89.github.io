@@ -1,7 +1,7 @@
 $(function(){
 	$('#intro').modal('show');
 
-	
+
 	var running = true;
 	var gameBoard = []
 	var clickCount = 0
@@ -9,7 +9,7 @@ $(function(){
 	var oneScore = 0
 	var twoScore = 0
 	var playerOne= true
-	
+
 	var clickOne =""
 	var clickTwo =""
 	var classOne =""
@@ -28,10 +28,10 @@ $(function(){
 		score = 0
 		clickCount = 0
 		var parent = $(".game-wrapper");
-    	var divs = parent.children();
-    	while (divs.length) {
-        	parent.append(divs.splice(Math.floor(Math.random() 
-        	* divs.length), 1)[0]);
+    var divs = parent.children();
+    while (divs.length) {
+      parent.append(divs.splice(Math.floor(Math.random()
+      * divs.length), 1)[0]);
 		}
 	}
 
@@ -39,7 +39,6 @@ $(function(){
 
 	//PLAY AGAIN BUTTON
 	$('.shuffle').click(function (){
-		//console.log('SHUFFLING!')
 		$('img').addClass("visibility");
 		shuffleGame();
 		$('.score').text("");
@@ -51,57 +50,41 @@ $(function(){
 
 	});
 
-	// function removeClass(){
-	// 	classTwo.addClass("visibility");
-		
-	// }
 
 	//MATCHING FUNCTION
 	 $('.game-wrapper').find('div').on('click', function(){
-	 	console.log(gameBoard.length)
-		console.log(playerOne)
 	 	if (running === true){
 	 		score = score + 1;
 	 	}
+
 	 	$('.score').text('');
 	 	$('.score').append(score + ' clicks.');
-	 	//console.log(score)
 	 	if(running === false){
 	 		return;
 	 	}
+
 	 	if((clickCount % 2 === 0) && ($('img',this).attr('class') === 'visibility')) {
 	 		clickOne = $('img',this).attr('src');
-	 		//console.log(clickOne);
 	 		classOne = $('img',this);
-	 		//clickOne = $('img',this).val();
 	 		clickCount = clickCount + 1;
-	 		//score = score + 1;
 	 		$('img', this).removeClass("visibility");
 	 	}else if((clickCount % 2 != 0) && ($('img',this).attr('class') === 'visibility')){
 	 		clickTwo = $('img',this).attr('src');
-	 		//console.log(clickTwo);
 	 		classTwo = $('img',this);
-	 		//clickTwo = $('img',this).val();
 	 		clickCount = clickCount + 1;
-	 		//score - score + 1
-	 		//setInterval(removeClass, 500);
 	 		$('img', this).removeClass("visibility");
 	 			if(clickOne != clickTwo){
-	 				//classOne.addClass("visibility");
 	 				setTimeout(function(){
 	 					classOne.addClass("visibility");
        					classTwo.addClass("visibility");
   						 }, 300);
-	 				//classTwo.addClass("visibility");
-	 				//console.log(setInterval(removeClass, 500));
 	 			} else {
 	 				gameBoard.push(clickOne, clickTwo)
 	 				checkEnd();
 	 				return;
 	 			}
-	 		}
-
-      });
+	 	}
+  });
 
 	 function checkEnd(){
 	 	if (gameBoard.length != 16){
@@ -122,7 +105,7 @@ $(function(){
 	 				$('#WinnerOne').modal('show');
 	 				$('h3').text('');
 	 				$('h3').append("Player 1 Wins!")
-	 			} 
+	 			}
 	 			else if(twoScore < oneScore){
 	 				$('#WinnerTwo').modal('show');
 	 				$('h3').text('');
@@ -133,10 +116,8 @@ $(function(){
 	 				$('h3').text('');
 	 				$('h3').append("It's a tie!")
 	 			}
-	
+
 	 	}
 	 };
 
-
-	//
 });

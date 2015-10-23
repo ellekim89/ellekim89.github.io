@@ -1,5 +1,9 @@
 body{
-	background-image: url("http://hdwallpapersfit.com/wp-content/uploads/2015/01/channing-tatum-latest-wallpapers-fit.jpg");
+	background: url("http://hdwallpapersfit.com/wp-content/uploads/2015/01/channing-tatum-latest-wallpapers-fit.jpg") no-repeat center center fixed;
+	 -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+	background-size: cover;
 	width: 550px;
 	margin: auto;
 	text-align: center;
@@ -24,7 +28,7 @@ h3{
 .visibility {
 	visibility: hidden;
 }
-img{ 
+img{
 	border-radius: 100%;
 	max-height:100%;
 
