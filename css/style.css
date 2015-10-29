@@ -11,6 +11,12 @@ body{
 	text-align: center;
 }
 
+@media screen and (orientation:portrait) {
+    body {
+        background:white;
+    }
+}
+
 .page-wrapper{
 	width: 550px;
 	margin: auto;
