@@ -4,6 +4,8 @@ body{
 	-webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+	background-repeat: no-repeat;
+
 /*		width: 550px;
 	margin: auto;*/
 	text-align: center;
