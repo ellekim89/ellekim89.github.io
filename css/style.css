@@ -1,6 +1,7 @@
 body{
 	background: white url("http://hdwallpapersfit.com/wp-content/uploads/2015/01/channing-tatum-latest-wallpapers-fit.jpg");
 	background-size: cover;
+	background-repeat: no-repeat;
 /*		width: 550px;
 	margin: auto;*/
 	text-align: center;
